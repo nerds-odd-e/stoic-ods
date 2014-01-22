@@ -1,0 +1,38 @@
+{
+  "name": "stoic-ods",
+  "version": "0.0.1",
+  "description": "Import-Export ods Files to Stoic JSON spreadsheets",
+  "main": "lib/stoic-ods.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sutoiku/stoic-ods.git"
+  },
+  "keywords": [
+    "Stoic",
+    "excel",
+    "ods",
+    "spreadsheet-import",
+    "spreadsheet-export"
+  ],
+  "author": "Hugues",
+  "license": "Public",
+  "bugs": {
+    "url": "https://github.com/sutoiku/stoic-ods/issues"
+  },
+  "homepage": "https://github.com/sutoiku/stoic-ods",
+  "dependencies": {
+    "sax": "~0.6.0",
+    "adm-zip": "~0.4.3",
+    "unzip": "~0.1.9"
+  },
+  "devDependencies": {
+    "chai": "*"
+  },
+  "engines": {
+    "node": ">=0.8.x",
+    "npm": ">=1.2.x"
+  }
+}
