@@ -7,7 +7,7 @@ describe('When parsing the SmallDateFormats spreadsheet', function() {
     stoicOds.parseOds(filePath, function(e, spreadsheet) {
       temporary = spreadsheet.sheets;
       name = spreadsheet.name;
-      console.log('temporary', JSON.stringify(temporary, null, 2));
+      // console.log('temporary', JSON.stringify(temporary, null, 2));
       done();
     });
   });
