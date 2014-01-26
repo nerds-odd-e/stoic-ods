@@ -27,7 +27,8 @@
     "unescape",
     "_",
     "par",
-    "each"
+    "each",
+    "setImmediate"
   ],
   "smarttabs": true,
   "trailing": false,
