@@ -4,7 +4,8 @@ describe('When parsing the SmallDateFormats spreadsheet', function() {
   var temporary, name;
   before(function(done) {
     var filePath = 'test/assets/SmallDateFormats.ods';
-    stoicOds.parseOds(filePath, function(e, spreadsheet) {
+    var options = { collapseDefaultNumberFormat: true };
+    stoicOds.parseOds(filePath, options, function(e, spreadsheet) {
       temporary = spreadsheet.sheets;
       name = spreadsheet.name;
       // console.log('temporary', JSON.stringify(temporary, null, 2));
@@ -19,5 +20,8 @@ describe('When parsing the SmallDateFormats spreadsheet', function() {
   });
   it('Must have resolved a number format', function() {
     expect(temporary.Sheet1.numberFormats[0][1]).to.equal('h:mm:ss');    
+  });
+  it('Must have collapsed the a number format that is identical on the entire column', function() {
+    expect(temporary.Sheet1.numberFormats.length).to.equal(1);    
   });
 });
