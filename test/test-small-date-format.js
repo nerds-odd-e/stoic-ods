@@ -4,7 +4,7 @@ describe('When parsing the SmallDateFormats spreadsheet', function() {
   var temporary, name;
   before(function(done) {
     var filePath = 'test/assets/SmallDateFormats.ods';
-    var options = { collapseDefaultNumberFormat: true };
+    var options = { collapseDefaultNumberFormat: true, useOfficeDate: true, useOfficeTime: true };
     stoicOds.parseOds(filePath, options, function(e, spreadsheet) {
       temporary = spreadsheet.sheets;
       name = spreadsheet.name;
