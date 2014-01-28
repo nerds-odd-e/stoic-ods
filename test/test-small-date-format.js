@@ -1,9 +1,14 @@
 var expect = require('chai').expect;
 var stoicOds = require('../lib/stoic-ods');
-describe('When parsing the SmallDateFormats spreadsheet', function() {
+
+var files = ['test/assets/SmallDateFormats-google.ods',
+              'test/assets/SmallDateFormats-libreoffice.ods'];
+
+files.forEach(function(filePath) {
+var fileName = filePath.split('/').pop().split('.')[0];
+describe('When parsing the ' + fileName + ' spreadsheet', function() {
   var temporary, name;
   before(function(done) {
-    var filePath = 'test/assets/SmallDateFormats.ods';
     var options = { collapseDefaultNumberFormat: true, useOfficeDate: true, useOfficeTime: true };
     stoicOds.parseOds(filePath, options, function(e, spreadsheet) {
       temporary = spreadsheet.sheets;
@@ -13,7 +18,7 @@ describe('When parsing the SmallDateFormats spreadsheet', function() {
     });
   });
   it('Must have found a name', function() {
-    expect(name).to.equal('SmallDateFormats');    
+    expect(name.indexOf('SmallDateFormats')).to.equal(0);    
   });
   it('Must have parsed 1 sheet', function() {
     expect(Object.keys(temporary)).to.deep.equal(['Sheet1']);    
@@ -24,4 +29,6 @@ describe('When parsing the SmallDateFormats spreadsheet', function() {
   it('Must have collapsed the a number format that is identical on the entire column', function() {
     expect(temporary.Sheet1.numberFormats.length).to.equal(1);    
   });
+});
+
 });
