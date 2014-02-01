@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<office:document-settings xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:xlink="http://www.w3.org/1999/xlink" office:version="1.2">
+  <office:settings>
+    <config:config-item-set config:name="ooo:configuration-settings">
+      <config:config-item config:name="LoadReadonly" config:type="boolean">false</config:config-item>
+      <config:config-item config:name="UpdateFromTemplate" config:type="boolean">true</config:config-item>
+      <config:config-item config:name="PrinterSetup" config:type="base64Binary" />
+      <config:config-item-map-indexed config:name="ForbiddenCharacters">
+        <config:config-item-map-entry>
+          <config:config-item config:name="Language" config:type="string">en</config:config-item>
+          <config:config-item config:name="Country" config:type="string">US</config:config-item>
+          <config:config-item config:name="Variant" config:type="string" />
+          <config:config-item config:name="BeginLine" config:type="string" />
+          <config:config-item config:name="EndLine" config:type="string" />
+        </config:config-item-map-entry>
+      </config:config-item-map-indexed>
+    </config:config-item-set>
+  </office:settings>
+</office:document-settings>
